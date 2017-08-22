@@ -1,4 +1,10 @@
 def longest_substring(input_string):
+    '''
+    Takes as input a string and returns length of longest substring
+    :param input_string: input string
+    :return: length of longest substring
+    '''
+
     length = len(input_string)
     i = 0
     j = 0
