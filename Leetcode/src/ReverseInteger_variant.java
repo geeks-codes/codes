@@ -1,4 +1,4 @@
-public class ReverseInteger_optimized {
+public class ReverseInteger_variant {
     public static int reverseInteger(int n) {
         long reverse = 0;
 
