@@ -1,6 +1,6 @@
 public class reverse_integer_j {
 
-    public int reverse_integer(int a) {
+    public static int reverse_integer(int a) {
         /*
         * Takes as input an integer and returns the reversed number. If number overflows on reversal then 0 is returned*/
         int temp = a;
@@ -24,7 +24,9 @@ public class reverse_integer_j {
     }
 
     public static void main(String arg[]) {
+        int a = reverse_integer(321);
 
+        System.out.println(a);
 
 
     }
