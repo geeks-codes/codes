@@ -1,5 +1,8 @@
-lists = [[2], [1], [3]]
+import re
 
-lists[-2].append(1)
+str  = '-123a'
 
-print(lists)
+new_str = re.split()
+
+
+
