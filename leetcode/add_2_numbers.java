@@ -19,16 +19,16 @@ class Solution {
         
         while(true)
         {
-            if(temp1 == null && temp2 == null)
+            if(temp1 == null && temp2 == null && carry==0)
             {
                 break;
             }
-            else if(temp2 == null)
+            if(temp2 == null)
             {
                 temp2 = new ListNode(0);
                 temp2.next = null;
             }
-            else if(temp1 == null)
+            if(temp1 == null)
             {
                 temp1 = new ListNode(0);
                 temp1.next = null;
@@ -53,11 +53,7 @@ class Solution {
             temp1 = temp1.next;
             temp2 = temp2.next;
         }
-        if(carry == 1)
-        {
-            prev.next = new ListNode(1);
-            prev.next.next = null;
-        }
+        
      return head;   
     }
 }
