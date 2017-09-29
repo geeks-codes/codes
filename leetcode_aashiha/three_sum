@@ -1,0 +1,48 @@
+class Solution 
+{
+    public List<List<Integer>> threeSum(int[] nums) 
+    {
+        List<List<Integer>> output = new ArrayList<List<Integer>>();
+        Arrays.sort(nums);
+        for(int i=0;i<nums.length-2;i++)
+        {
+            int l=i+1;
+            int r = nums.length -1;
+            while(l<r)
+            {
+                int sum = nums[i] + nums[l] + nums[r];
+                if(sum == 0)
+                {
+                    List<Integer> res = new LinkedList<Integer>();
+                    res.add(nums[i]);
+                    res.add(nums[l]);
+                    res.add(nums[r]);
+                    if(!output.contains(res))         //check if out list already has res to avoid duplicates
+                    {
+                        output.add(res);    
+                    }
+                    l++;
+                    r--;
+                 /*   while(l<r && nums[l]==nums[l+1])           // can be used to avoid repeated characters in res
+                    {
+                        l++;
+                    }
+                    while(l<r && nums[r]==nums[r-1])
+                    {
+                        r--;
+                    }*/
+                }
+                else if(sum > 0)
+                {
+                    r--;
+                }
+                else if(sum < 0)
+                {
+                    l++;
+                }
+            }
+        }
+        return output;
+    }
+}
+
